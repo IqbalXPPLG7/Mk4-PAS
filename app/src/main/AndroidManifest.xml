@@ -12,15 +12,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HitungPengeluaran"
         tools:targetApi="tiramisu">
+
+        <!-- Form Activity -->
         <activity
             android:name=".FormActivity"
             android:exported="false" />
+
+        <!-- SignUp Activity -->
         <activity
             android:name=".SignUpActivity"
             android:exported="false" />
+
+        <!-- SignIn Activity -->
         <activity
             android:name=".SignInActivity"
             android:exported="false" />
+
+        <!-- Splash Activity: satu-satunya launcher -->
         <activity
             android:name=".SplashActivity"
             android:exported="true"
@@ -28,10 +36,11 @@
             tools:ignore="DiscouragedApi">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- Aktivitas lain -->
+        </activity>
+
+        <!-- AddPengeluaran Activity -->
         <activity
             android:name=".view.fragment.pengeluaran.add.AddPengeluaranActivity"
             android:exported="false">
@@ -39,6 +48,8 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
+        <!-- AddPemasukan Activity -->
         <activity
             android:name=".view.fragment.pemasukan.add.AddPemasukanActivity"
             android:exported="false">
@@ -46,21 +57,18 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
+        <!-- Main Activity -->
         <activity
             android:name=".view.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             tools:ignore="DiscouragedApi">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
     </application>
 
 </manifest>
