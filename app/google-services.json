@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "190458603456",
+    "project_id": "sidang-isbat-ppt02",
+    "storage_bucket": "sidang-isbat-ppt02.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:190458603456:android:dd7f2c4ad2b21400f04a25",
+        "android_client_info": {
+          "package_name": "com.amolla.hitungpengeluaran"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "190458603456-fc8rei1r9odt67e8i5d6i5r43ughp19v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCm9zITkkYdJNv0jgKCw3Co6LklIxNcltU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "190458603456-fc8rei1r9odt67e8i5d6i5r43ughp19v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,89 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace 'com.amolla.hitungpengeluaran'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.amolla.hitungpengeluaran"
+        minSdk 23
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        // ✅ Tambahkan MultiDex jika aplikasi besar
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    // Pengaturan Java versi 17
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    // Pengaturan Kotlin untuk JVM 17
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    viewBinding {
+        enabled = true
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1' // Ubah ke versi stabil
+    implementation 'com.google.android.material:material:1.11.0' // Gunakan versi stabil terbaru
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4' // Ubah ke versi stabil
+    implementation 'androidx.activity:activity-ktx:1.8.2' // Gunakan versi stabil terbaru
+
+    // ✅ Gunakan Firebase BOM agar dependency selalu cocok
+    implementation platform('com.google.firebase:firebase-bom:32.7.3')
+    implementation 'com.google.firebase:firebase-auth-ktx'
+    implementation 'com.google.firebase:firebase-firestore-ktx'
+    implementation 'com.google.android.gms:play-services-auth:20.7.0'
+    implementation 'com.google.firebase:firebase-firestore:24.5.0'
+
+
+    // Room components
+    implementation "androidx.room:room-runtime:2.6.1"
+    kapt "androidx.room:room-compiler:2.6.1"
+    androidTestImplementation "androidx.room:room-testing:2.6.1"
+
+    // Lifecycle components
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.6.2"
+    kapt "androidx.lifecycle:lifecycle-compiler:2.6.2"
+
+    // RxJava
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.2'
+    implementation 'io.reactivex.rxjava3:rxjava:3.1.8'
+
+    // MultiDex (Jika aplikasi besar)
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    // Testing
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1' // Gunakan versi stabil terbaru
+}
+
+// Pastikan ini tetap di bawah
+apply plugin: 'com.google.gms.google-services'

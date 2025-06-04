@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="6dp"
+        android:text="Sign Up"
+        android:textColor="#6A9BF9"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <!-- Subtitle -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Let's create your new account"
+        android:textSize="16sp"
+        android:textColor="#888888"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Input Email -->
+    <EditText
+        android:id="@+id/inputEmail"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:background="@drawable/input_background"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Input Password -->
+    <EditText
+        android:id="@+id/inputPassword"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:background="@drawable/input_background"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Tombol Create Account -->
+    <Button
+        android:id="@+id/btnCreateAccount"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:text="Create Account"
+        android:background="@drawable/button_primary"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Link ke Halaman Login -->
+    <TextView
+        android:id="@+id/tvSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already have an account? Sign In"
+        android:textColor="@android:color/holo_blue_dark"
+        android:layout_gravity="center_horizontal"
+        android:textSize="12sp"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>
